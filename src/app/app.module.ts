@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 import { MatToolbarModule,
   MatIconModule,
@@ -20,6 +21,7 @@ import { MatToolbarModule,
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PatternComponent } from './pattern/pattern.component';
+import { PatternService } from './services/pattern.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { PatternComponent } from './pattern/pattern.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -45,7 +48,9 @@ import { PatternComponent } from './pattern/pattern.component';
     MatListModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [
+    PatternService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,4 +14,8 @@ export class PatternComponent implements OnInit {
 
   paternTypes = ["Creational", "Structural", "Behavioral"];
 
+  savePattern(pattern) {
+    console.log(pattern);
+  }
+
 }

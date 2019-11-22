@@ -1,21 +1,24 @@
 
 <div class="example-container">
-<mat-card class="form-container">
-    
-        <mat-form-field>
-          <input matInput placeholder="Title">
-        </mat-form-field>
-      
-        <mat-form-field>
-          <textarea matInput placeholder="Description"></textarea>
-        </mat-form-field>
-      
-        <mat-form-field>
-          <mat-select placeholder="Select">
-            <mat-option *ngFor="let type of paternTypes" value="type">{{type}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <button mat-raised-button color="primary">Primary</button>
-</mat-card>
+  <form #f="ngForm" (ngSubmit) = "save(f.value)">
+      <mat-card class="form-container">
+          <mat-form-field>
+            <input ngModel name="title" matInput placeholder="Title">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <textarea ngModel name="description" matInput placeholder="Description"></textarea>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-select ngModel name="type" placeholder="Select">
+              <mat-option *ngFor="let type of paternTypes" value="type">{{type}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary">Save</button>
+  </mat-card>
+
+  </form>
+
 </div>
 
