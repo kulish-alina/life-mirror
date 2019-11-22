@@ -1,0 +1,13 @@
+
+
+<mat-grid-list class="home-container" cols="6" rowHeight="1:1">
+    <button mat-raised-button color="primary" routerLink="/new">Primary</button>
+    <mat-grid-tile *ngFor="let pattern of patternList">
+        <mat-card class="card-area">  
+            <mat-card-title>{{pattern.title}}</mat-card-title>
+            <img src="https://refactoring.guru/images/patterns/content/factory-method/factory-method.png">
+            <mat-card-content>{{pattern.description}}</mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    
+  </mat-grid-list>

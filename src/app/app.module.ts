@@ -14,15 +14,19 @@ import { MatToolbarModule,
   MatFormFieldModule,
   MatSelectModule,
   MatInputModule,
-  MatSidenavModule } from '@angular/material';
+  MatSidenavModule,
+  MatListModule,
+  MatGridListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { PatternComponent } from './pattern/pattern.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    PatternComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ import { AboutComponent } from './about/about.component';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
